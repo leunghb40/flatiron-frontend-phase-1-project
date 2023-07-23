@@ -1,3 +1,7 @@
 console.log('main.js connected')
 
-document.addEventListener('focus')
+const handleFormInputFocus = () => {
+    console.log(`focus occurred`)
+}
+
+document.addEventListener('focus', handleFormInputFocus)
