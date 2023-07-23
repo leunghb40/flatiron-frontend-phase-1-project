@@ -1,24 +1,43 @@
-console.log('main.js connected');
+const fetchImageButton = document.getElementById('fetch-image-btn');
+const dogImageElement = document.getElementById('dog-image');
+const breedElement = document.getElementById('breed');
+const descriptionElement = document.getElementById('description');
 
-const searchTermsInput = document.body.querySelector("#search-terms");
+fetchImageButton.addEventListener('click', fetchRandomDogImage);
+dogImageElement.addEventListener('click', showBreedDetails);
 
-const getMealCategories = async () => {
-    const getMealCategoriesApiURL = "https://www.themealdb.com/api/json/v1/1/categories.php"
-
-    try {
-        const response = await fetch(getMealCategoriesApiURL)
-        const data = response.json()
-        console.log(`data: `, data);
-    } catch (error) {
-        console.log(error)
-        alert('Something went wrong, try again later')
-    }
+function fetchRandomDogImage() {
+  fetch('https://dog.ceo/api/breeds/image/random')
+    .then(response => response.json())
+    .then(data => {
+      const imageUrl = data.message;
+      dogImageElement.src = imageUrl;
+      breedElement.textContent = '';
+      descriptionElement.textContent = '';
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      dogImageElement.src = '';
+      breedElement.textContent = 'Failed to fetch a random dog image.';
+      descriptionElement.textContent = '';
+    });
 }
 
-const handleFormInputFocus = async () => {
-    console.log(`focus occurred`);
+function showBreedDetails() {
+  const breed = breedElement.textContent;
+  if (breed) {
+    fetch(`https://dog.ceo/api/breed/${breed}/list`)
+      .then(response => response.json())
+      .then(data => {
+        const subBreeds = data.message;
+        const description = subBreeds.length > 0 ? 'Sub-breeds: ' + subBreeds.join(', ') : 'No sub-breeds available.';
+        descriptionElement.textContent = description;
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        descriptionElement.textContent = 'Failed to fetch breed details.';
+      });
+  }
+}
 
-    await getMealCategories();
-};
-
-searchTermsInput.addEventListener('focus', handleFormInputFocus);
+fetchRandomDogImage();
