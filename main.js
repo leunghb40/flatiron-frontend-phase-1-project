@@ -5,7 +5,12 @@ const searchTermsInput = document.body.querySelector("#search-terms");
 const getMealCategories = async () => {
     const getMealCategoriesApiURL = "https://www.themealdb.com/api/json/v1/1/categories.php"
 
-    const response = await fetch(getMealCategoriesApiURL)
+    try {
+        const response = await fetch(getMealCategoriesApiURL)
+    } catch (error) {
+        console.log(error)
+        alert('Something went wrong, try again later')
+    }
 
     const data = response.json()
 }
