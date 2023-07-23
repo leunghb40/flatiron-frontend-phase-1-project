@@ -1,94 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phase 1 Project</title>
-
-    <!-- css reset: sindresorhus/modern-normalize -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- custom css -->
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- custom javascript -->
-    <script defer src="main.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Dog Image Viewer</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- header begins -->
-    <header id="top">
-        <h1>Phase 1 Project</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#section1">Section 1</a>
-                </li>
-                <li>
-                    <a href="#section2">Section 2</a>
-                </li>
-                <li>
-                    <a href="#section3">Section 3</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <!-- header ends -->
+  <header>
+    <h1>Random Dog Image Viewer</h1>
+  </header>
+  
+  <main>
+    <div id="image-container">
+      <img id="dog-image" src="" alt="Random Dog Image">
+      <p id="breed"></p>
+      <p id="description"></p>
+    </div>
+    <button id="fetch-image-btn">Fetch Random Dog Image</button>
+  </main>
 
-    <!-- main begins -->
-    <main>
-
-        <section class="search-form">
-            <h2>Form Section</h2>
-            <form action="GET" id="meal-form">
-                <label for="search-terms">Search term:</label>
-                <input type="text" name="search-terms" id="search-terms" placeholder="input search term" required>
-
-                <br />
-
-                <label for="category-filter">Category filter:</label>
-                <select name="category-filter" id="category-filter" required>
-                    <option value="option 1">option 1</option>
-                    <option value="option 2">option 2</option>
-                    <option value="option 3">option 3</option>
-                </select>
-
-                <br />
-
-                <input type="submit" value="Search">
-            </form>
-        </section>
-
-
-
-        <section id="section1">
-            <h2>Section 1</h2>
-            <img src="#" alt="some image">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nulla a delectus. Placeat repellendus dolorem cum aspernatur iusto! Numquam, sed impedit nisi fugiat repellendus iure quasi voluptatum doloremque quisquam nobis.
-            </p>
-        </section>
-        <section id="section2">
-            <h2>Section 2</h2>
-            <img src="#" alt="some image">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nulla a delectus. Placeat repellendus dolorem cum aspernatur iusto! Numquam, sed impedit nisi fugiat repellendus iure quasi voluptatum doloremque quisquam nobis.
-            </p>
-        </section>
-        <section id="section3">
-            <h2>Section 3</h2>
-            <img src="#" alt="some image">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nulla a delectus. Placeat repellendus dolorem cum aspernatur iusto! Numquam, sed impedit nisi fugiat repellendus iure quasi voluptatum doloremque quisquam nobis.
-            </p>
-        </section>
-    </main>
-    <!-- main ends -->
-
-    <!-- footer begins -->
-    <footer>
-        <p>Copyright QBL 2023</p>
-        <a href="#top">Back to top</a>
-    </footer>
-    <!-- footer ends -->
+  <script src="index.js"></script>
 </body>
 </html>
