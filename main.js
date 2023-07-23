@@ -7,12 +7,13 @@ const getMealCategories = async () => {
 
     try {
         const response = await fetch(getMealCategoriesApiURL)
+        const data = response.json()
+       console.log(`data: `, data);
     } catch (error) {
         console.log(error)
         alert('Something went wrong, try again later')
     }
-
-    const data = response.json()
+    
 }
 
 const handleFormInputFocus = async () => {
