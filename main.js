@@ -4,6 +4,6 @@ const handleFormInputFocus = () => {
     console.log(`focus occurred`)
 }
 
-document.body.querySelector("#search-terms")
+const searchTermsInput = document.body.querySelector("#search-terms")
 
-document.body.addEventListener('focus', handleFormInputFocus)
+searchTermsInput.addEventListener('focus', handleFormInputFocus)
