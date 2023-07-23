@@ -1,1 +1,3 @@
 Project Title: Random Dog Image Viewer
+
+Project Description: The Random Dog Image Viewer is a Single Page Application (SPA) that allows users to view random images of dogs. The frontend of the application will be built using HTML, CSS, and JavaScript, and it will communicate with a public API that provides random dog images. The app will fetch data from the API asynchronously using JSON as the communication format and display the images on the page. Users will have the option to refresh and get a new random dog image by clicking a button. Additionally, users can click on a specific dog image to see more details about the dog breed.
