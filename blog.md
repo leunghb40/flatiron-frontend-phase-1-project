@@ -11,3 +11,8 @@ Project Requirements:
 6.	Use at least 2 distinct event listeners of different types for interactivity. For example, you can have a button click event and an image click event.
 7.	Implement array iteration using available array methods (e.g., forEach, map, or filter) to manipulate the API data and display it in different ways.
 8.	Follow good coding practices to keep the code DRY by utilizing functions to abstract repetitive code.
+
+Project Components:
+1.	index.html: This file will contain the HTML structure of the application, including a header, main content area, and a button to fetch a new random dog image.
+2.	styles.css: This CSS file will style the application's elements to create an attractive and user-friendly interface.
+3.	index.js: This JavaScript file will handle the interactivity and API communication for the application.
