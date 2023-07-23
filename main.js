@@ -1,2 +1,2 @@
-console.log('connected')
+console.log('main.js connected')
 
